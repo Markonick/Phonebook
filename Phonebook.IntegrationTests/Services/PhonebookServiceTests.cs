@@ -26,7 +26,7 @@ namespace Phonebook.IntegrationTests.Services
         {
             var response = await _service.GetContactsAsync();
             
-            Assert.That(response, Is.EqualTo(1));
+            Assert.That(response.Contacts.Count, Is.EqualTo(10));
         }
     }
 }
